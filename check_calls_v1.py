@@ -36,8 +36,6 @@ tmp = open(tmp_file, 'r')
 for i in unique:
     print i
     for z in dir_listing:
-        #print i
-        #print z[3],z[5]
         if i in z and z[3] == 'NEAR' and z[5] == 'NEAR':
             NN += 1
         elif i in z and z[3] == 'FAR' and z[5] == 'FAR':

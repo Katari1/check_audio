@@ -8,3 +8,6 @@ for i in `ls | awk -F_ '{print $1}' | awk '!a[$0]++'`;do if [[ `ls | grep $i | g
 
 V1 goes through a list and compares the file but is inefficient as it goes through all the files for each unique identifier.
 V2 takes the files and puts it in a dictionary and then only searches the files with the set unique identifier.  Much faster.
+
+
+This script needs to run on a bunch of servers so to do that I wrote check_calls.sh to run it.  It uses the /etc/hosts to get the servers it needs to run on and the script is stored locally on each server.
